@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: marvel
+  cache:
+    cache-names: characters
+    caffeine:
+      spec:
+        maximumSize: 10000
+        expireAfterAccess: 600s
+  main:
+    allow-bean-definition-overriding: true
+
+translate:
+  google-key: ""
+  url-translate: "https://www.googleapis.com/language/translate/v2?key="
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+
+logging:
+  level:
+    web: INFO
+
+marvel:
+  max-characters: 16
+  api-public-key: ""
+  api-private-key: ""
+
+server:
+  port: 8080
+
+routing:
+  base-path: "marvel/v1"
+
+swagger:
+  host: localhost:8080
+  title: Marvel - Characters API
+  description: Marvel API - Rest API routing for Marvel Gateway Backend Services.
+  version: 1.0
+  terms-of-service: Terms of service
+  contact-name: Weverton Santos
+  contact-email: weverton.a.santos@gmail.com
+  contact-url: https://github.com/weverton15
